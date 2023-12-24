@@ -226,7 +226,7 @@ h1 {
     width: 90px;
     height: 90px;
     margin: 20px auto;
-    background: url('../img/design81.svg') center / contain no-repeat;
+    background: url('../img/design81.png') center / contain no-repeat;
 }
 .url {
     font-size: 1rem;
@@ -332,7 +332,7 @@ h1 {
 
 /* フッター（削除OK※デフォルト非表示） */
 .mainFooter {
-    display: none;
+    /*display: none;*/
     margin: 10vh 0;
     font-size: 1rem;
     text-align: center;
