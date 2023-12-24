@@ -19,7 +19,17 @@
     <!-- ヘッダー -->
     <header id="mainHeader" class="mainHeader">
         <h1>でいすいIT管理室</h1>
-        <div class="url">https://deisuigames.github.io/it-admin</div>
+        <span>LastUpdate:</span><time id="modify"></time>
+<script>
+/* 更新日の取得 */
+const last = new Date(document.lastModified);
+const year = last.getFullYear();
+const month = last.getMonth() + 1;
+const date = last.getDate();
+/* 日付を書き換える */
+const target = document.getElementById('modify');
+target.textContent = year + '-' + month + '-' + date;
+</script>
         <nav id="mainNavClone" class="nav headerNav">
             <!-- ここにナビゲーションが複製 -->
         </nav>
