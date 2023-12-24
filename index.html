@@ -14,6 +14,15 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 </head>
+<script type="text/javascript">
+    let submitted = false;
+</script>
+<iframe
+    name="hidden_iframe"
+    id="hidden_iframe"
+    style="display: none"
+    onload="if(submitted){window.location='thanks.html';}"
+></iframe>
 <body>
 <div class="allWrap">
     <!-- ヘッダー -->
@@ -74,7 +83,7 @@ target.textContent = year + '/' + month + '/' + date;
             <h3><span>でいすい公式ファンクラブ</span></h3>
             <p>でいすいのファンが集まるコミュニティ</p>
             <b><p>リンク：<a href="https://deisuigames.github.io/fanclub/">https://deisuigames.github.io/fanclub/</a></p><b>
-            <br><a href="https://twitter.com/deisuideisui/"><img src="img/IMG_4891.webp" width="30px" height="30px"><span> @deisuideisui</span></a>
+            <br><a href="https://twitter.com/deisui_fanclub/"><img src="img/IMG_4891.webp" width="30px" height="30px"><span> @deisui_fanclub</span></a>
             <!-- <h4><span>heading4</span></h4>
             <p><a href="">リンク</a>と<em>強調</em>と<strong>もっと強調</strong></p> -->
         </section>
@@ -82,14 +91,6 @@ target.textContent = year + '/' + month + '/' + date;
         <section id="link_main" class="box">
             <h2>main contents</h2>
             <p><span class="caution">このマーク</span>はちょっと注意。</p>
-
-            <h3><span>name change</span></h3>
-            <!-- ダミーフォーム -->
-            <form class="form nameChange space">
-                <input type="text" placeholder="名字" class="enter">
-                <input type="text" placeholder="名前" class="enter">
-                <input type="submit" value="input" class="button">
-            </form>
 
             <h3><span>long</span></h3>
 
@@ -141,6 +142,75 @@ target.textContent = year + '/' + month + '/' + date;
                 <li><a href="">タイトル</a></li>
                 <li><a href=""> タイトル</a></li>
             </ul>
+        </section>
+
+        <section id="contact" class="box">
+            <h2>contact</h2>
+            <p>IT管理室へお問い合わせがある場合はこちらから。</p>
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScaVsQ8ZnTH0MI5BR9iPkWD_7o22ZFl34IYAGQKcwz63OAgrg/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+	        <div class="c-form__item">
+		    <label class="c-form__label" for="nickname"
+			>ニックネーム<span class="c-form__required">必須</span></label
+		    >
+		<input
+			name="entry.1006291693"
+			class="c-form__input"
+			id="nickname"
+			placeholder="例）やまっだー"
+			type="text"
+			required="required"
+		/>
+	</div>
+	<div class="c-form__item">
+		<label class="c-form__label" for="name"
+			>本名<span class="c-form__required">必須</span></label
+		>
+		<input
+            name="entry.54034782"
+			class="c-form__input"
+			id="name"
+			placeholder="例）山田太郎"
+			type="text"
+			required="required"
+		/>
+	</div>
+	<div class="c-form__item">
+		<label class="c-form__label" for="email"
+			>メールアドレス<span class="c-form__required">必須</span></label
+		>
+		<input
+            name="entry.946031571"
+			class="c-form__input"
+			id="email"
+			placeholder="例）yamada@example.com"
+			type="email"
+			required="required"
+		/>
+	</div>
+	<div class="c-form__item">
+		<label class="c-form__label" for="x-id"
+			>X(旧Twitter)ID<span class="c-form__required">必須</span></label
+		>
+		<input
+            name="entry.1336522776"
+			class="c-form__input"
+			id="x-id"
+			placeholder="例）@yamadda"
+			type="text"
+			required="required"
+		/>
+	</div>
+	<div class="c-form__item">
+		<label class="c-form__label" for="t_message"
+			>お問い合わせ内容<span class="c-form__required">必須</span></label
+		>
+        <textarea id="t_message" name="entry.1468229124" placeholder="例）〇〇でバグが発生している。" required></textarea>
+	</div>
+	<div class="c-form__submit">
+		<button type="submit">送信する</button>
+	</div>
+</form>
+            
         </section>
     </main><!-- /mainWrap -->
     <!-- /メイン -->
